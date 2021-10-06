@@ -9,678 +9,624 @@
 	<script type="application/javascript" src="pluginAssets/mermaid/mermaid_render.js"></script>
 	<link rel="stylesheet" href="pluginAssets/highlight.js/atom-one-light.css">
 	<title>S2R Digital Twin Research Project</title>
+	<Style>
+		/*!
+ * Bootstrap Reboot v4.0.0 (https://getbootstrap.com)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
+ */
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+		}
+
+		html {
+			font-family: sans-serif;
+			line-height: 1.15;
+			-webkit-text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+			-ms-overflow-style: scrollbar;
+			-webkit-tap-highlight-color: transparent;
+		}
+
+		@-ms-viewport {
+			width: device-width;
+		}
+
+		article,
+		aside,
+		dialog,
+		figcaption,
+		figure,
+		footer,
+		header,
+		hgroup,
+		main,
+		nav,
+		section {
+			display: block;
+		}
+
+		body {
+			margin: 0;
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+			font-size: 1.1rem;
+			font-weight: 400;
+			line-height: 1.5;
+			color: #212529;
+			text-align: left;
+			background-color: #fff;
+		}
+
+		[tabindex="-1"]:focus {
+			outline: 0 !important;
+		}
+
+		hr {
+			box-sizing: content-box;
+			height: 0;
+			overflow: visible;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin-top: 0;
+			margin-bottom: 1rem;
+		}
+
+		p {
+			margin-top: 0;
+			margin-bottom: 1rem;
+		}
+
+		abbr[title],
+		abbr[data-original-title] {
+			text-decoration: underline;
+			-webkit-text-decoration: underline dotted;
+			text-decoration: underline dotted;
+			cursor: help;
+			border-bottom: 0;
+		}
+
+		address {
+			margin-bottom: 1rem;
+			font-style: normal;
+			line-height: inherit;
+		}
+
+		ol,
+		ul,
+		dl {
+			margin-top: 0;
+			margin-bottom: 1rem;
+		}
+
+		ol ol,
+		ul ul,
+		ol ul,
+		ul ol {
+			margin-bottom: 0;
+		}
+
+		dt {
+			font-weight: 700;
+		}
+
+		dd {
+			margin-bottom: .5rem;
+			margin-left: 0;
+		}
+
+		blockquote {
+			margin: 0 0 1rem;
+		}
+
+		dfn {
+			font-style: italic;
+		}
+
+		b,
+		strong {
+			font-weight: bolder;
+		}
+
+		small {
+			font-size: 80%;
+		}
+
+		sub,
+		sup {
+			position: relative;
+			font-size: 75%;
+			line-height: 0;
+			vertical-align: baseline;
+		}
+
+		sub {
+			bottom: -.25em;
+		}
+
+		sup {
+			top: -.5em;
+		}
+
+		a {
+			color: #007bff;
+			text-decoration: none;
+			background-color: transparent;
+			-webkit-text-decoration-skip: objects;
+		}
+
+		a:hover {
+			color: #0056b3;
+			text-decoration: underline;
+		}
+
+		a:not([href]):not([tabindex]) {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		a:not([href]):not([tabindex]):hover,
+		a:not([href]):not([tabindex]):focus {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		a:not([href]):not([tabindex]):focus {
+			outline: 0;
+		}
+
+		pre,
+		code,
+		kbd,
+		samp {
+			font-family: monospace, monospace;
+			font-size: 1em;
+		}
+
+		pre {
+			margin-top: 0;
+			margin-bottom: 1rem;
+			overflow: auto;
+			-ms-overflow-style: scrollbar;
+		}
+
+		figure {
+			margin: 0 0 1rem;
+		}
+
+		img {
+			vertical-align: middle;
+			border-style: none;
+		}
+
+		svg:not(:root) {
+			overflow: hidden;
+		}
+
+		table {
+			border-collapse: collapse;
+		}
+
+		caption {
+			padding-top: 0.75rem;
+			padding-bottom: 0.75rem;
+			color: #6c757d;
+			text-align: left;
+			caption-side: bottom;
+		}
+
+		th {
+			text-align: inherit;
+		}
+
+		label {
+			display: inline-block;
+			margin-bottom: .5rem;
+		}
+
+		button {
+			border-radius: 0;
+		}
+
+		button:focus {
+			outline: 1px dotted;
+			outline: 5px auto -webkit-focus-ring-color;
+		}
+
+		input,
+		button,
+		select,
+		optgroup,
+		textarea {
+			margin: 0;
+			font-family: inherit;
+			font-size: inherit;
+			line-height: inherit;
+		}
+
+		button,
+		input {
+			overflow: visible;
+		}
+
+		button,
+		select {
+			text-transform: none;
+		}
+
+		button,
+		html [type="button"],
+		[type="reset"],
+		[type="submit"] {
+			-webkit-appearance: button;
+		}
+
+		button::-moz-focus-inner,
+		[type="button"]::-moz-focus-inner,
+		[type="reset"]::-moz-focus-inner,
+		[type="submit"]::-moz-focus-inner {
+			padding: 0;
+			border-style: none;
+		}
+
+		input[type="radio"],
+		input[type="checkbox"] {
+			box-sizing: border-box;
+			padding: 0;
+		}
+
+		input[type="date"],
+		input[type="time"],
+		input[type="datetime-local"],
+		input[type="month"] {
+			-webkit-appearance: listbox;
+		}
+
+		textarea {
+			overflow: auto;
+			resize: vertical;
+		}
+
+		fieldset {
+			min-width: 0;
+			padding: 0;
+			margin: 0;
+			border: 0;
+		}
+
+		legend {
+			display: block;
+			width: 100%;
+			max-width: 100%;
+			padding: 0;
+			margin-bottom: .5rem;
+			font-size: 1.5rem;
+			line-height: inherit;
+			color: inherit;
+			white-space: normal;
+		}
+
+		progress {
+			vertical-align: baseline;
+		}
+
+		[type="number"]::-webkit-inner-spin-button,
+		[type="number"]::-webkit-outer-spin-button {
+			height: auto;
+		}
+
+		[type="search"] {
+			outline-offset: -2px;
+			-webkit-appearance: none;
+		}
+
+		[type="search"]::-webkit-search-cancel-button,
+		[type="search"]::-webkit-search-decoration {
+			-webkit-appearance: none;
+		}
+
+		::-webkit-file-upload-button {
+			font: inherit;
+			-webkit-appearance: button;
+		}
+
+		output {
+			display: inline-block;
+		}
+
+		summary {
+			display: list-item;
+			cursor: pointer;
+		}
+
+		template {
+			display: none;
+		}
+
+		[hidden] {
+			display: none !important;
+		}
+
+		/*# sourceMappingURL=bootstrap-reboot.css.map */
+
+		body {
+			margin: 0 auto;
+			max-width: 800px;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		p {
+			padding-top: 1.5rem;
+			max-width: 80ch;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		body {
+			background-color: #f5f5f5;
+		}
+
+		article {
+			background-color: #fff;
+			padding-left: 2rem;
+			padding-right: 2rem;
+			padding-bottom: 4rem;
+		}
+
+		hr {
+			color: rgb(212, 212, 212);
+			opacity: 0.3;
+		}
+
+		.lead {
+			font-size: 1.3rem;
+		}
+
+		.cta {
+			text-decoration: underline;
+			font-weight: 600;
+			font-size: 1.2rem;
+			text-align: center;
+		}
+		.small{
+			font-size: 0.9rem;
+		}
+	</Style>
 </head>
 
 <body>
-	<div class="exported-note">
-		<div class="exported-note-title">S2R Digital Twin Research Project</div>
-
-		<style>
-			/* https://necolas.github.io/normalize.css/ */
-			html {
-				line-height: 1.15;
-				-ms-text-size-adjust: 100%;
-				-webkit-text-size-adjust: 100%
-			}
-
-			body {
-				margin: 0
-			}
-
-			article,
-			aside,
-			footer,
-			header,
-			nav,
-			section {
-				display: block
-			}
-
-			h1 {
-				font-size: 2em;
-				margin: .67em 0
-			}
-
-			hr {
-				box-sizing: content-box;
-				height: 0;
-				overflow: visible
-			}
-
-			pre {
-				font-family: monospace, monospace;
-				font-size: 1em
-			}
-
-			a {
-				background-color: transparent;
-				-webkit-text-decoration-skip: objects
-			}
-
-			b,
-			strong {
-				font-weight: bolder
-			}
-
-			small {
-				font-size: 80%
-			}
-
-			img {
-				border-style: none
-			}
-
-			body {
-				font-size: 15px;
-				color: #32373F;
-				word-wrap: break-word;
-				line-height: 1.6em;
-				background-color: #ffffff;
-				font-family: 'Avenir', 'Arial', sans-serif;
-				padding-bottom: 0px;
-				padding-top: 0px;
-			}
-
-			strong {
-				color: #000000;
-			}
-
-			kbd {
-				border: 1px solid rgb(220, 220, 220);
-				box-shadow: inset 0 -1px 0 rgb(220, 220, 220);
-				padding: 2px 4px;
-				border-radius: 3px;
-				background-color: rgb(243, 243, 243);
-			}
-
-			::-webkit-scrollbar {
-				width: 7px;
-				height: 7px;
-			}
-
-			::-webkit-scrollbar-corner {
-				background: none;
-			}
-
-			::-webkit-scrollbar-track {
-				border: none;
-			}
-
-			::-webkit-scrollbar-thumb {
-				background: rgba(100, 100, 100, 0.3);
-				border-radius: 5px;
-			}
-
-			::-webkit-scrollbar-track:hover {
-				background: rgba(0, 0, 0, 0.1);
-			}
-
-			::-webkit-scrollbar-thumb:hover {
-				background: rgba(100, 100, 100, 0.7);
-			}
-
-
-
-			/* Remove top padding and margin from first child so that top of rendered text is aligned to top of text editor text */
-
-			#rendered-md>h1:first-child,
-			#rendered-md>h2:first-child,
-			#rendered-md>h3:first-child,
-			#rendered-md>h4:first-child,
-			#rendered-md>ul:first-child,
-			#rendered-md>ol:first-child,
-			#rendered-md>table:first-child,
-			#rendered-md>blockquote:first-child,
-			#rendered-md>img:first-child,
-			#rendered-md>p:first-child {
-				margin-top: 0;
-				padding-top: 0;
-			}
-
-			p,
-			h1,
-			h2,
-			h3,
-			h4,
-			h5,
-			h6,
-			ul,
-			table {
-				margin-top: .6em;
-				margin-bottom: 1.35em;
-
-				/*
-				Adds support for RTL text in the note body. It automatically detects the direction using the content.
-				Issue: https://github.com/laurent22/joplin/issues/3991
-			*/
-				unicode-bidi: plaintext;
-			}
-
-			h1,
-			h2,
-			h3,
-			h4,
-			h5,
-			h6,
-			ul,
-			table {
-				margin-bottom: 0.65em;
-			}
-
-			h1,
-			h2,
-			h3,
-			h4,
-			h5,
-			h6 {
-				line-height: 1.5em;
-			}
-
-			h1 {
-				font-size: 1.5em;
-				font-weight: bold;
-				border-bottom: 1px solid #dddddd;
-				padding-bottom: .3em;
-			}
-
-			h2 {
-				font-size: 1.3em;
-				font-weight: bold;
-				padding-bottom: .1em;
-				*/
-			}
-
-			h3 {
-				font-size: 1.1em;
-			}
-
-			h4,
-			h5,
-			h6 {
-				font-size: 1em;
-				font-weight: bold;
-			}
-
-			.exported-note-title {
-				font-size: 2em;
-				font-weight: bold;
-				margin-bottom: 0.8em;
-				line-height: 1.5em;
-				padding-bottom: .35em;
-				border-bottom: 1px solid #dddddd;
-			}
-
-			a {
-				color: #155BDA;
-			}
-
-			ul,
-			ol {
-				padding-left: 0;
-				margin-left: 1.7em;
-			}
-
-			li {
-				margin-bottom: .4em;
-			}
-
-			li p {
-				margin-top: 0.2em;
-				margin-bottom: 0;
-			}
-
-			.resource-icon {
-				display: inline-block;
-				position: relative;
-				top: 0.3em;
-				text-decoration: none;
-				width: 1.2em;
-				height: 1.4em;
-				margin-right: 0.4em;
-				background-color: #155BDA;
-			}
-
-			/* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs 
-     * into the css classes below.
-     * svgs are obtained from https://github.com/ForkAwesome/Fork-Awesome/tree/master/src/icons/svg
-     * instead of the svg width, height property you must use a viewbox here, 0 0 1536 1792 is typically the actual size of the icon
-     * each line begins with the pre-amble -webkit-mask: url("data:image/svg+xml;utf8,
-     * and of course finishes with ");
-     * to precvent artifacts it is also necessary to include -webkit-mask-repeat: no-repeat;
-     * on the following line
-     * */
-			.fa-joplin {
-				/* Awesome Font file */
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M373.834 128C168.227 128 0 296.223 0 501.834v788.336C0 1495.778 168.227 1664 373.834 1664h788.336c205.608 0 373.83-168.222 373.83-373.83V501.834C1536 296.224 1367.778 128 1162.17 128zm397.222 205.431h417.424a7.132 7.132 0 0 1 7.132 7.133v132.552c0 4.461-3.619 8.073-8.077 8.073h-57.23c-24.168 0-43.768 19.338-44.284 43.374v2.377h-.017v136.191h-.053l-.466 509.375c-5.02 77.667-39.222 149.056-96.324 201.046-60.28 54.834-141.948 85.017-229.962 85.017-12.45 0-25.208-.61-37.907-1.785-92.157-8.682-181.494-48.601-251.662-112.438-71.99-65.517-117.147-150.03-127.164-238-11.226-98.763 23.42-192.783 95.045-257.937 81.99-74.637 198.185-101.768 316.613-75.704 5.574 1.227 9.55 6.282 9.55 11.997v199.52c-.199 2.625-1.481 6.599-8.183 2.896-.663-.365-1.194-.511-1.653-.531-21.987-10.587-45.159-17.57-68.559-19.916-.38-.04-.757-.124-1.138-.163-.537-.048-1.034-.033-1.556-.075-4.13-.354-8.183-.517-12.203-.58-.87-.011-1.771-.127-2.641-.127-.486 0-.951.05-1.437.057-1.464.011-2.886.115-4.33.163-2.76.102-5.497.211-8.182.448-.273.024-.547.07-.835.097-25.509 2.4-47.864 11.104-65.012 25.47-.954.802-1.974 1.53-2.9 2.36a1.34 1.34 0 0 1-.168.146c-23.96 21.8-34.881 53.872-30.726 90.316 4.62 40.737 26.94 81.156 62.841 113.823 35.908 32.67 80.335 52.977 125.113 57.186 35.118 3.36 66.547-3.919 89.899-20.461a97.255 97.255 0 0 0 9.365-7.501c2.925-2.661 5.569-5.5 8.086-8.416.3-.348.672-.673.975-1.024 8.253-9.864 14.222-21.067 17.996-33.148.639-2.034 1.051-4.148 1.564-6.227.381-1.563.81-3.106 1.112-4.693.555-2.784.923-5.632 1.253-8.49.086-.709.183-1.414.237-2.128.492-4.893.693-9.858.55-14.91h.013V521.623c-2.01-22.626-20.78-40.434-43.928-40.434h-57.23a8.071 8.071 0 0 1-8.077-8.073V340.564a7.132 7.132 0 0 1 7.136-7.133z'/></svg>");
-			}
-
-			.fa-file-image {
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-128-448v320H256v-192l192-192 128 128 384-384zm-832-192c-106 0-192-86-192-192s86-192 192-192 192 86 192 192-86 192-192 192z'/></svg>");
-				-webkit-mask-repeat: no-repeat;
-			}
-
-			.fa-file-pdf {
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-514-593c25 20 53 38 84 56 42-5 81-7 117-7 67 0 152 8 177 49 7 10 13 28 2 52-1 1-2 3-3 4v1c-3 18-18 38-71 38-64 0-161-29-245-73-139 15-285 46-392 83-103 176-182 262-242 262-10 0-19-2-28-7l-24-12c-3-1-4-3-6-5-5-5-9-16-6-36 10-46 64-123 188-188 8-5 18-2 23 6 1 1 2 3 2 4 31-51 67-116 107-197 45-90 80-178 104-262-32-109-42-221-24-287 7-25 22-40 42-40h22c15 0 27 5 35 15 12 14 15 36 9 68-1 3-2 6-4 8 1 3 1 5 1 8v30c-1 63-2 123-14 192 35 105 87 190 146 238zm-576 411c30-14 73-57 137-158-75 58-122 124-137 158zm398-920c-10 28-10 76-2 132 3-16 5-31 7-44 2-17 5-31 7-43 1-3 2-5 4-8-1-1-1-3-2-5-1-18-7-29-13-36 0 2-1 3-1 4zm-124 661c88-35 186-63 284-81-10-8-20-15-29-23-49-43-93-103-127-176-19 61-47 126-83 197-15 28-30 56-45 83zm646-16c-5-5-31-24-140-24 49 18 94 28 124 28 9 0 14 0 18-1 0-1-1-2-2-3z'/></svg>");
-				-webkit-mask-repeat: no-repeat;
-			}
-
-			.fa-file-word {
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM233 768v107h70l164 661h159l128-485c5-15 8-30 10-46 1-8 2-16 2-24h4l3 24c3 14 4 30 9 46l128 485h159l164-661h70V768h-300v107h90l-99 438c-4 16-6 33-7 46l-2 21h-4c0-6-2-14-3-21-3-13-5-30-9-46L825 768H711l-144 545c-4 16-5 33-8 46l-4 21h-4l-2-21c-1-13-3-30-7-46l-99-438h90V768H233z'/></svg>");
-				-webkit-mask-repeat: no-repeat;
-			}
-
-			.fa-file-powerpoint {
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-992-234v106h327v-106h-93v-167h137c43 0 82-2 118-15 90-31 146-124 146-233s-54-193-137-228c-38-15-84-19-130-19H416v107h92v555h-92zm353-280H650V882h120c35 0 62 6 83 18 36 21 56 62 56 115 0 56-20 99-62 120-21 10-47 15-78 15z'/></svg>");
-				-webkit-mask-repeat: no-repeat;
-			}
-
-			.fa-file-excel {
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-979-234v106h281v-106h-75l103-161c12-19 18-34 21-34h2c1 4 3 7 5 10 4 8 10 14 17 24l107 161h-76v106h291v-106h-68l-192-273 195-282h67V768H828v107h74l-103 159c-12 19-21 34-21 33h-2c-1-4-3-7-5-10-4-7-9-14-17-23L648 875h76V768H434v107h68l189 272-194 283h-68z'/></svg>");
-				-webkit-mask-repeat: no-repeat;
-			}
-
-			.fa-file-audio {
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM620 850c12 5 20 17 20 30v544c0 13-8 25-20 30-4 1-8 2-12 2-8 0-16-3-23-9l-166-167H288c-18 0-32-14-32-32v-192c0-18 14-32 32-32h131l166-167c10-9 23-12 35-7zm417 689c19 0 37-8 50-24 83-102 129-231 129-363s-46-261-129-363c-22-28-63-32-90-10-28 23-32 63-9 91 65 80 100 178 100 282s-35 202-100 282c-23 28-19 68 9 90 12 10 26 15 40 15zm-211-148c17 0 34-7 47-20 56-60 87-137 87-219s-31-159-87-219c-24-26-65-27-91-3-25 24-27 65-2 91 33 36 52 82 52 131s-19 95-52 131c-25 26-23 67 2 91 13 11 29 17 44 17z'/></svg>");
-				-webkit-mask-repeat: no-repeat;
-			}
-
-			.fa-file-video {
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM768 768c70 0 128 58 128 128v384c0 70-58 128-128 128H384c-70 0-128-58-128-128V896c0-70 58-128 128-128h384zm492 2c12 5 20 17 20 30v576c0 13-8 25-20 30-4 1-8 2-12 2-8 0-17-3-23-9l-265-266v-90l265-266c6-6 15-9 23-9 4 0 8 1 12 2z'/></svg>");
-				-webkit-mask-repeat: no-repeat;
-			}
-
-			.fa-file-archive {
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M640 384V256H512v128h128zm128 128V384H640v128h128zM640 640V512H512v128h128zm128 128V640H640v128h128zm700-388c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H768v128H640V128H128v1536h1280zM781 943c85 287 107 349 107 349 5 17 8 34 8 52 0 111-108 192-256 192s-256-81-256-192c0-18 3-35 8-52 0 0 21-62 120-396V768h128v128h79c29 0 54 19 62 47zm-141 465c71 0 128-29 128-64s-57-64-128-64-128 29-128 64 57 64 128 64z'/></svg>");
-				-webkit-mask-repeat: no-repeat;
-			}
-
-			.fa-file-code {
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM480 768c11-14 31-17 45-6l51 38c14 11 17 31 6 45l-182 243 182 243c11 14 8 34-6 45l-51 38c-14 11-34 8-45-6l-226-301c-8-11-8-27 0-38zm802 301c8 11 8 27 0 38l-226 301c-11 14-31 17-45 6l-51-38c-14-11-17-31-6-45l182-243-182-243c-11-14-8-34 6-45l51-38c14-11 34-8 45 6zm-620 461c-18-3-29-20-26-37l138-831c3-18 20-29 37-26l63 10c18 3 29 20 26 37l-138 831c-3 18-20 29-37 26z'/></svg>");
-				-webkit-mask-repeat: no-repeat;
-			}
-
-			.fa-file-alt,
-			.fa-file-csv {
-				/* fork-awesome doesn't have csv so we use the text icon */
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM384 800c0-18 14-32 32-32h704c18 0 32 14 32 32v64c0 18-14 32-32 32H416c-18 0-32-14-32-32v-64zm736 224c18 0 32 14 32 32v64c0 18-14 32-32 32H416c-18 0-32-14-32-32v-64c0-18 14-32 32-32h704zm0 256c18 0 32 14 32 32v64c0 18-14 32-32 32H416c-18 0-32-14-32-32v-64c0-18 14-32 32-32h704z'/></svg>");
-				-webkit-mask-repeat: no-repeat;
-			}
-
-			.fa-file {
-				-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280z'/></svg>");
-				-webkit-mask-repeat: no-repeat;
-			}
-
-			blockquote {
-				border-left: 4px solid rgb(220, 220, 220);
-				padding-left: 1.2em;
-				margin-left: 0;
-				opacity: 0.7;
-			}
-
-			.jop-tinymce table,
-			table {
-				text-align: left;
-				border-collapse: collapse;
-				border: 1px solid rgb(220, 220, 220);
-				background-color: #ffffff;
-			}
-
-			.jop-tinymce table td,
-			.jop-tinymce table th,
-			table td,
-			th {
-				text-align: left;
-				padding: .5em 1em .5em 1em;
-				font-size: 15;
-				color: #32373F;
-				font-family: 'Avenir', 'Arial', sans-serif;
-			}
-
-			.jop-tinymce table td,
-			table td {
-				border: 1px solid rgb(220, 220, 220);
-			}
-
-			.jop-tinymce table th,
-			table th {
-				border: 1px solid rgb(220, 220, 220);
-				border-bottom: 2px solid rgb(220, 220, 220);
-				background-color: rgb(247, 247, 247);
-			}
-
-			.jop-tinymce table tr:nth-child(even),
-			table tr:nth-child(even) {
-				background-color: rgb(247, 247, 247);
-			}
-
-			.jop-tinymce table tr:hover,
-			table tr:hover {
-				background-color: #e5e5e5;
-			}
-
-			hr {
-				border: none;
-				border-bottom: 2px solid #dddddd;
-			}
-
-			img {
-				max-width: 100%;
-				height: auto;
-			}
-
-			.inline-code,
-			.mce-content-body code {
-				border: 1px solid rgb(220, 220, 220);
-				background-color: rgb(243, 243, 243);
-				padding-right: .2em;
-				padding-left: .2em;
-				border-radius: .25em;
-				color: rgb(0, 0, 0);
-				font-size: .9em;
-			}
-
-			.highlighted-keyword {
-				background-color: #F3B717;
-				color: black;
-			}
-
-			.not-loaded-resource img {
-				width: 1.15em;
-				height: 1.15em;
-				background: white;
-				padding: 2px !important;
-				border-radius: 2px;
-				box-shadow: 0 1px 3px #000000aa;
-			}
-
-			a.not-loaded-resource img {
-				margin-right: .2em;
-			}
-
-			a.not-loaded-resource {
-				display: flex;
-				flex-direction: row;
-				align-items: center;
-			}
-
-			.md-checkbox input[type=checkbox]:checked {
-				opacity: 0.7;
-			}
-
-			.jop-tinymce ul.joplin-checklist .checked,
-			.md-checkbox .checkbox-label-checked {
-				opacity: 0.5;
-			}
-
-			.exported-note {
-				padding: 1em;
-			}
-
-			.joplin-editable .joplin-source {
-				display: none;
-			}
-
-			mark {
-				background: #F7D26E;
-				color: black;
-			}
-
-			/* =============================================== */
-			/* For TinyMCE */
-			/* =============================================== */
-
-			.mce-content-body {
-				/* Note: we give a bit more padding at the bottom, to allow scrolling past the end of the document */
-				padding: 5px 10px 10em 0;
-			}
-
-			/*
-		.mce-content-body code {
-			background-color: transparent;
-		}
-		*/
-
-			.mce-content-body [data-mce-selected=inline-boundary] {
-				background-color: transparent;
-			}
-
-			.mce-content-body .joplin-editable {
-				cursor: pointer !important;
-			}
-
-			.mce-content-body.mce-content-readonly {
-				opacity: 0.5;
-			}
-
-			/* We need that to make sure click events have the A has a target */
-			.katex a span {
-				pointer-events: none;
-			}
-
-			.media-player {
-				width: 100%;
-				margin-top: 10px;
-			}
-
-			.media-player.media-pdf {
-				min-height: 100vh;
-			}
-
-			/* Clear the CODE style if the element is within a joplin-editable block */
-			.mce-content-body .joplin-editable code {
-				border: none;
-				background: none;
-				padding: 0;
-				color: inherit;
-				font-size: inherit;
-			}
-
-			/* =============================================== */
-			/* For TinyMCE */
-			/* =============================================== */
-
-			@media print {
-				body {
-					height: auto !important;
-				}
-
-				pre {
-					white-space: pre-wrap;
-				}
-
-				.code,
-				.inline-code {
-					border: 1px solid #CBCBCB;
-				}
-
-				#joplin-container-content {
-					/* The height of the content is set dynamically by JavaScript (in updateBodyHeight) to go
-				   around various issues related to scrolling. However when printing we don't want this
-				   fixed size as that would crop the content. So we set it to auto here. "important" is
-				   needed to override the style set by JavaScript at the element-level. */
-					height: auto !important;
-				}
-			}
-
-
-			/*
-					FOR THE MARKDOWN EDITOR
-				*/
-
-			/* Remove the indentation from the checkboxes at the root of the document
-				   (otherwise they are too far right), but keep it for their children to allow
-				   nested lists. Make sure this value matches the UL margin. */
-
-			li.md-checkbox {
-				list-style-type: none;
-			}
-
-			li.md-checkbox input[type=checkbox] {
-				margin-left: -1.71em;
-				margin-right: 0.7em;
-			}
-
-			ul.joplin-checklist {
-				list-style: none;
-			}
-
-			/*
-					FOR THE RICH TEXT EDITOR
-				*/
-
-			ul.joplin-checklist li::before {
-				content: "\f14a";
-				font-family: "Font Awesome 5 Free";
-				background-size: 16px 16px;
-				pointer-events: all;
-				cursor: pointer;
-				width: 1em;
-				height: 1em;
-				margin-left: -1.3em;
-				position: absolute;
-				color: #32373F;
-			}
-
-			.joplin-checklist li:not(.checked)::before {
-				content: "\f0c8";
-			}
-
-			.mermaid {
-				background-color: white;
-				width: 640px;
-			}
-		</style>
-		<div id="rendered-md">
-			<h2 id="s2r-digital-twin-research-project">S2R Digital Twin Research Project</h2>
-			<h3 id="about-shift2rail">About Shift2Rail</h3>
-			<p>We're working on a research study to support the Shift2Rail programme (S2R). S2R are the main actors of
-				the European railway system, consisting of:</p>
-			<ul>
-				<li>Train operators</li>
-				<li>Signal suppliers</li>
-				<li>Infrastructure managers</li>
-			</ul>
-			<br class="jop-noMdConv" />
-			<p>The goal of S2R is to supply knowledge, strategic background and technical agreements for its members to
-				achieve the Single European Railway Area.</p>
-			<p>Objective of the program is the removal of remaining technical obstacles and building improved solutions
-				with the implementation of advanced technologies.</p>
-			<h3 id="about-the-research">About the Research</h3>
-			<p>Specifically, we're looking for opportunities to apply <em>digital twin concepts</em> in these segments
-				of the European railway industry:</p>
-			<ul>
-				<li>Interoperability</li>
-				<li>Developing, certifying and authorising new systems</li>
-				<li>Automation of systems, processes and assets</li>
-				<li>Improvement of the operation environment</li>
-				<li>Improvement of the test and development environment</li>
-			</ul>
-			<br class="jop-noMdConv" />
-			<h2 id="how-you-can-contribute">How you can contribute</h2>
-			<p>For the work package paper, we want to understand the work experience of professionals working in the
-				field of signal supply test scenarios, especially in the scenario of zero onsite testing (ZOST). In
-				parallel, we will gather a more broad view on the topic by asking other experts in the related sectors
-				like infrastructure and train operations.</p>
-			<ul>
-				<li>
-					<p><strong>The primary objective is to understand, visualise and outline the testing processes from
-							the perspective of the engineers.</strong></p>
-				</li>
-				<li>
-					<p>Secondary, we want to gain insight in what the engineers and managers involved in the testing
-						workflow would suggest to improve with the help of digital twin technology.</p>
-				</li>
-			</ul>
-			<br class="jop-noMdConv" />
-			<p>The goal is to inform the S2R partners about strategic directions with a (hypothetical) use case. We
-				probably won't find an actual working solution right away that can be applied immediately. But we want
-				to get as close as possible, to base the research on hands-on experiences rather than assumptions.</p>
-			<p>We will use the methodology of user centered design practices to evaluate the findings and build one or
-				more hypothetical case studies.</p>
-			<p><strong>We'd like to ask you to:</strong></p>
-			<ul>
-				<li>Fill out the survey. It will give us an accurate representation of how the documented IVVQ process
-					is applied in an actual project by the engineers and engineering managers</li>
-				<li>walk us through the test process workflow in an interview. <em>(optionally, if your schedule allows
-						it)</em></li>
-				<li>participate in a solution and prototyping workshop.<br>
-					<em>(optionally, if your schedule allows it)</em>
-				</li>
-			</ul>
-			<br class="jop-noMdConv" />
-			<hr>
-			<br class="jop-noMdConv" />
-			<h2 id="what-is-a-digital-twin">What is a Digital Twin?</h2>
-			<h3 id="definition">Definition</h3>
-			<p><strong>A digital twin is a virtual model that describes a physical object or a system of physical
-					objects. It is used to help manufacturers and engineers to model present, future or past states of a
-					system or object.</strong></p>
-			<p><img src="DigitalTwin-simple.jpg" alt="Digital Twin Concept"></p>
-			<p>The object or network of objects are producing data of core functions with the help of sensors and IoT
-				technology. Once the virtual model is connected to the physical assets or systems, the data input can be
-				used to run simulations, generate real time decision support for users remote or onsite, study
-				performance issues and do root cause analysis of scenarios and prevention services.</p>
-			<p>The details of a digital twin is of course depending on the purpose of the virtual modelling system, but,
-				in general, two given characteristics are essential:</p>
-			<ol>
-				<li>
-					<p>There is always representation of a physical object or system as a counterpart to the virtual
-						model, and both are interconnected via data input, processing and output operations.</p>
-				</li>
-				<li>
-					<p>Also, there is always a representation of the physical real-world-state, that can be extended (to
-						future or historic states) or asynchronous but stays in some way in the loop with the
-						virtual<br>
-						model.</p>
-				</li>
-			</ol>
-			<br class="jop-noMdConv" />
-			<h3 id="use-cases-for-digital-twin-technology">Use Cases for Digital Twin Technology</h3>
-			<ul>
-				<li>
-					<p>Visualize products in use, and support them with a controlled granularity of data view generated
-						by the product in real time both for the direct users and an (optional) control unit user.</p>
-				</li>
-				<li>
-					<p>Build a digital thread to connect partials of systems or dispatched systems and helps with the
-						traceability of user actions and system task flows.</p>
-				</li>
-				<li>
-					<p>Support the proof and refinement of assumptions with predictive analytics, both in real-time use
-						cases as a decision making support tool as well as test out solutions early in the product<br>
-						development cycle.</p>
-				</li>
-				<li>
-					<p>Help trouble-shooting remote assets and objects</p>
-				</li>
-				<li>
-					<p>Integrate remote assets and objects in a system or virtual environment</p>
-				</li>
-				<li>
-					<p>Integrate hardware assets, objects or networks in a virtual environment</p>
-				</li>
-				<li>
-					<p>Manage and organise complex system-of-systems</p>
-				</li>
-			</ul>
-			<br class="jop-noMdConv" />
-			<p><img src="DigitalTwin_illustration.jpg" alt="Digital Twin Concept Detailed View"></p>
-			<br class="jop-noMdConv" />
-			<h3 id="digital-twins-vs-simulation">Digital Twins vs. Simulation</h3>
-			<p>The difference of a digital twin versus a simulation mainly depends on the scale of information flow:</p>
-			<p>While a <em>simulation</em> usually generates insights of a specific aspect in a controlled environment,
-				the <em>digital twin</em> can act as a hub for multiple cases of the same or even different processes.
-			</p>
-			<p>Simulations in general are not run with real time data input and the flow of data information is not a
-				two-directional flow like in a digital twin application case. The data generated by the physical object
-				is fed into the algorithms of the modelling process, changed or monitored and can be applied back to the
-				physical world.</p>
-			<p>The fundamental difference is the bi-direction of information, making a digital twin an extension of the
-				physical world which allows to shift back and forth in time and structure while having the
-				representation of the real object or system running along.</p>
+	<article>
+
+		<div class="exported-note">
+			<div id="rendered-md">
+				<h1 id="s2r-digital-twin-research-project">S2R Digital Twin Research Project</h1>
+				<div>
+					<hr>
+
+					<div>
+						<p class="lead">
+							We'd like to ask you to support our research work for Shift2Rail by filling out a
+							questionnaire. We will ask you to describe your daily work.
+						</p>
+						<a href="#" class="cta">Fill out the questionnaire</a>
+						<p class="small">
+							Your data will be kept confidential, not shared with any third parties and your individual
+							responses will not be published.
+						</p>
+						<p>
+							Your input will help us to understand the context of a possible use case of digital twin
+							technology application in the European railway system.
+						<p>
+							For more details please
+							scroll down the page.
+						</p>
+						</p>
+						
+						<hr>
+					</div>
+					<h3>
+						More Information & Research Details
+					</h3>
+					<h4>
+						Table of Contents
+					</h4>
+					<ul>
+						<li>
+							<a href="#about-shift2rail">About Shift2Rail</a>
+						</li>
+						<li>
+							<a href="#about-the-research">About the Research</a>
+						</li>
+						<li>
+							<a href="#how-you-can-contribute">How you can contribute</a>
+						</li>
+						<li>
+							<a href="#what-is-a-digital-twin">What is a Digital Twin?</a>
+						</li>
+						<li>
+							<a href="#use-cases-for-digital-twin-technology">Use Cases for Digital Twin Technology</a>
+						</li>
+						<li>
+							<a href="#digital-twins-vs-simulation">Digital Twins vs. Simulation</a>
+						</li>
+					</ul>
+				</div>
+				<h3 id="about-shift2rail">About Shift2Rail</h3>
+				<p>We're working on a research study to support the Shift2Rail program (S2R). S2R are the main actors
+					of
+					the European railway system, consisting of:</p>
+				<ul>
+					<li>Train operators</li>
+					<li>Signal suppliers</li>
+					<li>Infrastructure managers</li>
+				</ul>
+				<br class="jop-noMdConv" />
+				<p>The goal of S2R is to supply knowledge, strategic background and technical agreements for its members
+					to
+					achieve the Single European Railway Area.</p>
+				<p>Objective of the program is the removal of remaining technical obstacles and building improved
+					solutions
+					with the implementation of advanced technologies.</p>
+				<h3 id="about-the-research">About the Research</h3>
+				<p>Specifically, we're looking for opportunities to apply <em>digital twin concepts</em> in these
+					segments
+					of the European railway industry:</p>
+				<ul>
+					<li>Interoperability</li>
+					<li>Developing, certifying and authorising new systems</li>
+					<li>Automation of systems, processes and assets</li>
+					<li>Improvement of the operation environment</li>
+					<li>Improvement of the test and development environment</li>
+				</ul>
+				<br class="jop-noMdConv" />
+				<h2 id="how-you-can-contribute">How you can contribute</h2>
+				<p>We want to understand the work experience of professionals working in the
+					field of signal supply test scenarios, especially in the scenario of zero onsite testing (ZOST). In
+					parallel, we will gather a more broad view on the topic by asking other experts in the related
+					sectors
+					like infrastructure and train operations.</p>
+				<ul>
+					<li>
+						<p><strong>The primary objective is to understand, visualise and outline the testing processes
+								from
+								the perspective of the engineers.</strong></p>
+					</li>
+					<li>
+						<p>Secondary, we want to gain insight in what the engineers and managers involved in the testing
+							workflow would suggest to improve with the help of digital twin technology.</p>
+					</li>
+				</ul>
+				<br class="jop-noMdConv" />
+				<p>The goal is to inform the S2R partners about strategic directions with a (hypothetical) use case. We
+					probably won't find an actual working solution right away that can be applied immediately. But we
+					want
+					to get as close as possible, to base the research on hands-on experiences rather than assumptions.
+				</p>
+				<p>We will use the methodology of user centered design practices to evaluate the findings and build one
+					or
+					more hypothetical case studies.</p>
+				<p><strong>How can you support us?</strong></p>
+				<ul>
+					<li>Fill out the survey. It will give us an accurate representation of how the documented IVVQ
+						process
+						is applied in an actual project by the engineers and engineering managers</li>
+					<li>walk us through the test process workflow in an interview. <em>(optionally, if your schedule
+							allows
+							it)</em></li>
+					<li>participate in a solution and prototyping workshop.<br>
+						<em>(optionally, if your schedule allows it)</em>
+					</li>
+				</ul>
+				<br class="jop-noMdConv" />
+				<hr>
+				<br class="jop-noMdConv" />
+				<h2 id="what-is-a-digital-twin">What is a Digital Twin?</h2>
+				<h3 id="definition">Definition</h3>
+				<p><strong>A digital twin is a virtual model that describes a physical object or a system of physical
+						objects. It is used to help manufacturers and engineers to model present, future or past states
+						of a
+						system or object.</strong></p>
+				<img src="DigitalTwin-simple.jpg" alt="Digital Twin Concept">
+				<p>The object or network of objects are producing data of core functions with the help of sensors and
+					IoT
+					technology. Once the virtual model is connected to the physical assets or systems, the data input
+					can be
+					used to run simulations, generate real time decision support for users remote or onsite, study
+					performance issues and do root cause analysis of scenarios and prevention services.</p>
+				<p>The details of a digital twin is of course depending on the purpose of the virtual modelling system,
+					but,
+					in general, two given characteristics are essential:</p>
+				<ol>
+					<li>
+						<p>There is always representation of a physical object or system as a counterpart to the virtual
+							model, and both are interconnected via data input, processing and output operations.</p>
+					</li>
+					<li>
+						<p>Also, there is always a representation of the physical real-world-state, that can be extended
+							(to
+							future or historic states) or asynchronous but stays in some way in the loop with the
+							virtual<br>
+							model.</p>
+					</li>
+				</ol>
+				<br class="jop-noMdConv" />
+				<h3 id="use-cases-for-digital-twin-technology">Use Cases for Digital Twin Technology</h3>
+				<ul>
+					<li>
+						<p>Visualize products in use, and support them with a controlled granularity of data view
+							generated
+							by the product in real time both for the direct users and an (optional) control unit user.
+						</p>
+					</li>
+					<li>
+						<p>Build a digital thread to connect partials of systems or dispatched systems and helps with
+							the
+							traceability of user actions and system task flows.</p>
+					</li>
+					<li>
+						<p>Support the proof and refinement of assumptions with predictive analytics, both in real-time
+							use
+							cases as a decision making support tool as well as test out solutions early in the
+							product<br>
+							development cycle.</p>
+					</li>
+					<li>
+						<p>Help trouble-shooting remote assets and objects</p>
+					</li>
+					<li>
+						<p>Integrate remote assets and objects in a system or virtual environment</p>
+					</li>
+					<li>
+						<p>Integrate hardware assets, objects or networks in a virtual environment</p>
+					</li>
+					<li>
+						<p>Manage and organise complex system-of-systems</p>
+					</li>
+				</ul>
+				<br class="jop-noMdConv" />
+				<img src="DigitalTwin_illustration.jpg" alt="Digital Twin Concept Detailed View">
+				<br class="jop-noMdConv" />
+				<h3 id="digital-twins-vs-simulation">Digital Twins vs. Simulation</h3>
+				<p>The difference of a digital twin versus a simulation mainly depends on the scale of information flow:
+				</p>
+				<p>While a <em>simulation</em> usually generates insights of a specific aspect in a controlled
+					environment,
+					the <em>digital twin</em> can act as a hub for multiple cases of the same or even different
+					processes.
+				</p>
+				<p>Simulations in general are not run with real time data input and the flow of data information is not
+					a
+					two-directional flow like in a digital twin application case. The data generated by the physical
+					object
+					is fed into the algorithms of the modelling process, changed or monitored and can be applied back to
+					the
+					physical world.</p>
+				<p>The fundamental difference is the bi-direction of information, making a digital twin an extension of
+					the
+					physical world which allows to shift back and forth in time and structure while having the
+					representation of the real object or system running along.</p>
+			</div>
 		</div>
-	</div>
+		<a href="#s2r-digital-twin-research-project">-> Back to top</a>
+	</article>
+
 </body>
 
 </html>
